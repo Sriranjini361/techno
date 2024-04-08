@@ -37,7 +37,7 @@ const JobList = () => {
     return (
         <div >
             {data.map((item) => (
-                <div className="flex flex-wrap justify-center" key={item.id} onClick={() => handleClick(item._id)}>
+                <div className="flex flex-wrap justify-center cursor-pointer" key={item.id} onClick={() => handleClick(item._id)}>
                     <Card data={item} />
                 </div>
             ))}
