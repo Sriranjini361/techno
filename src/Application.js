@@ -28,10 +28,11 @@ const Apply = () => {
             formData.append('resume', file);
             formData.append('coverLetter', coverLetter);
 
-            const response = await fetch('http://localhost:5000/api/submitForm', {
+            const response = await fetch(process.env.REACT_APP_URL + '/api/submitForm', {
                 method: 'POST',
                 body: formData
             });
+            
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');

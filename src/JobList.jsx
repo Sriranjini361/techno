@@ -9,7 +9,7 @@ const JobList = () => {
     const { data, setData} = useContext(MyContext);
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/joblistings');
+            const response = await fetch(process.env.REACT_APP_URL + '/api/joblistings');
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }
@@ -37,7 +37,7 @@ const JobList = () => {
     return (
         <div >
             {data.map((item) => (
-                <div className="flex flex-wrap justify-center" key={item.id} onClick={() => handleClick(item.id)}>
+                <div className="flex flex-wrap justify-center" key={item.id} onClick={() => handleClick(item._id)}>
                     <Card data={item} />
                 </div>
             ))}

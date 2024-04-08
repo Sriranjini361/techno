@@ -12,7 +12,7 @@ const JobDetails = () => {
     console.log("Data:", data);
 
     // Find the job item with the matching id
-    const jobItem = data.find(item => item.id == id);
+    const jobItem = data.find(item => item._id == id);
 
     console.log("Job Item:", jobItem); // Log the job item to the console
 

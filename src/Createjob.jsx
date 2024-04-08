@@ -21,7 +21,7 @@ const Createjob = () => {
                 description
             };
 
-            const response = await fetch('http://localhost:5000/api/addJob', {
+            const response = await fetch(process.env.REACT_APP_URL + '/api/addJob', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
