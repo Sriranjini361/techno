@@ -6,6 +6,7 @@ import MyContext from "./Context";
 const JobList = () => {
     const navigate = useNavigate(); 
   //  const [data, setData] = useState([]);
+
     const { data, setData} = useContext(MyContext);
     const fetchData = async () => {
         try {
@@ -19,12 +20,12 @@ const JobList = () => {
             console.error('Error fetching data:', error);
         }
     };
-
+//to fetch Api data
     useEffect(() => {
         fetchData();
     }, []);
 
-    console.log(data)
+   // console.log(data)
 
     const handleClick = (id) => {
         navigate(`/jobdetails/${id}`);
@@ -42,6 +43,7 @@ const JobList = () => {
                 </div>
             ))}
         </div>
+
     );
 };
 

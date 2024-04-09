@@ -7,14 +7,14 @@ const JobDetails = () => {
     const { id } = useParams(); // Get the job ID from the URL params
     const { data } = useContext(MyContext);
     const navigate = useNavigate(); 
-    // Log the ID and data array to the console
-    console.log("ID:", id);
-    console.log("Data:", data);
+    
+   // console.log("ID:", id);
+    //console.log("Data:", data);
 
     // Find the job item with the matching id
     const jobItem = data.find(item => item._id == id);
 
-    console.log("Job Item:", jobItem); // Log the job item to the console
+    //console.log("Job Item:", jobItem); // Log the job item to the console
 
     // Check if the job item is found
     if (!jobItem) {
