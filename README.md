@@ -19,3 +19,5 @@ This is a web application built with ReactJS for browsing job listings, viewing 
    - Includes fields for the applicant's name, email, phone number, resume upload, and a cover letter (text area).
    - Implements form validation to ensure all required fields are filled in.
 
+To run the website in local .Please add the env file and add
+REACT_APP_URL=http://localhost:5000
